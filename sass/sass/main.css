@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(181, 114, 236, 0.752);
+}
+.main h1 {
+  color: rgb(78, 77, 77);
+  font-size: 6rem;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+.main h1:hover {
+  color: black;
+  cursor: pointer;
+  background-color: aliceblue;
+}
+.main p {
+  color: rgb(42, 42, 70);
+  font-size: 3rem;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.main p:hover {
+  color: blanchedalmond;
+  font-size: 3.5rem;
+  letter-spacing: 1rem;
+} /*# sourceMappingURL=main.css.map */

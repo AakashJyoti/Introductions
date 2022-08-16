@@ -1,0 +1,14 @@
+{
+  "0": {
+    "username": "Manoj",
+    "password": "$2b$10$eMlsKtTdBAzI/kkT4PbeQ.nT8aSAK6D3GCQFd3pwcrHWLJrYaYWlq"
+  },
+  "1": {
+    "username": "Rohit",
+    "password": "$2b$10$cUsDzNi5n/XmPMI2WZg2weyWcNXM6aoxtdKAP6l5BGva.cexJU1Ui"
+  },
+  "currentUser": {
+    "username": "hello",
+    "password": "$2b$10$kQE9Mzs2ZBsEA6K1Quox0eHgEKfxy1r1zIbb.97KwUyim25CCP0bO"
+  }
+}

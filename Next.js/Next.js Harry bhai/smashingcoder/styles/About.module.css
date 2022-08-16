@@ -1,0 +1,21 @@
+.container {
+  max-width: 55rem;
+  margin: 30px auto;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container h1 {
+  text-align: center;
+}
+
+.container p {
+  font-size: 0.9rem;
+  margin: 10px;
+}
+
+.container h2 {
+  margin-bottom: -6px;
+}
+

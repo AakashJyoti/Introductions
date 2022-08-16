@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Set interval and set time out</title>
+</head>
+
+<body>
+<div class="container">
+  time now is <span id="Time"></span>
+</div>
+  
+  <script>
+   function greet(){
+      console.log('Hello!..');
+    }
+   // setTimeout(greet,3000);
+    
+    
+ //   function greet(name,byeText){
+  //    console.log("Hello", name,  "" ,byeText);
+  //  }
+    
+ //  setTimeout(greet,3000,"Harry","Take care")
+ 
+// timeout=setTimeout(greet,2000);
+// console.log(timeout);
+ 
+// clearTimeout(timeout);
+ 
+// setInterval(greet,200);
+
+//intervalId=setInterval(greet,1000,"Aakash","jabba");
+//clearInterval(intervalId);
+
+function displayTime(){
+Time= new Date();
+console.log(Time);
+document.getElementById('Time').innetHTML=Time;
+}
+setInterval(displayTime,1000);
+  </script>
+
+</body>
+
+</html>

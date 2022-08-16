@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Basic concepts of grid</title>
+</head>
+<style>
+.container{
+  display: grid;
+    /*grid-template-columns: 300px 100px 100px;*/
+    /*grid-template-columns: 300px auto auto;*/
+    /*grid-template-columns: 2fr 3fr 2fr;*/
+    grid-template-columns: repeat(3,3fr);
+    grid-template-rows: repeat(3,3fr);
+    grid-gap:15px;
+}
+.item{
+  color: white;
+  height: 30px ;
+  background-color:#42445A;
+}
+  
+</style>
+
+<body>
+  <div class="container">
+    <div class="item">This is Item-1</div>
+    <div class="item">This is Item-2</div>
+    <div class="item">This is Item-3</div>
+    <div class="item">This is Item-4</div>
+    <div class="item">This is Item-5</div>
+    <div class="item">This is Item-6</div>
+    <div class="item">This is Item-7</div>
+    <div class="item">This is Item-8</div>
+    <div class="item">This is Item-9</div>
+  </div>
+
+</body>
+
+</html>

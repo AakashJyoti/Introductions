@@ -1,0 +1,26 @@
+body {
+  background: lightblue;
+}
+
+span {
+  font-size: 45pt;
+  background: blanchedalmond;
+  margin: 20px;
+  
+}
+
+Header {
+  text-align: center;
+  font-size: 20pt;
+  color: white;
+  background: black;
+  border: 2pt red;
+  
+}
+
+footer {
+  text-align: center;
+  font-size: 20pt;
+  background: black;
+  color: white;
+}

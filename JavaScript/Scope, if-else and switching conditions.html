@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scope, if-else and switching condition</title>
+</head>
+
+<body>
+  <div class="content">
+    <h1>This os heading</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis facilis soluta aliquam temporibus aperiam dolores quam inventore laboriosam qui quidem. Omnis non modi eaque nobis nisi dolor praesentium deserunt cupiditate, sed corporis tenetur voluptatibus officiis natus harum, sapiente iure. Quos temporibus asperiores aliquam. Incidunt iure atque, nihil expedita dolorum molestias tempore aliquam delectus harum dicta tenetur ea quaerat, ipsa quibusdam. Sapiente distinctio quibusdam accusantium fugiat quidem vitae repudiandae tempore minima, at omnis explicabo dolor, nesciunt. Repellendus commodi aspernatur perspiciatis voluptatum voluptas quisquam suscipit eligendi quia deleniti, velit adipisci esse?</p>
+  </div>
+  <script>
+  //scope
+    let a = 'u';
+
+    {
+      let a = 'ut';
+      console.log(a);
+    }
+    console.log(a);
+
+    {
+      const a = 'this cannot be changed';
+      console.log(a);
+    }
+    
+    //if-else condition
+    let age=56;
+    if(age>18){
+      console.log('you can drink');
+    }
+    else{
+      console.log("you can't");
+    }
+    
+    //switch case statements
+    const cups=25;
+    switch(cups){
+      case 20: console.log("value is 20");
+      break;
+      case 25: console.log("value is 25");
+      break;
+      default: console.log(" No cups");
+      break;
+    }
+    
+  </script>
+</body>
+
+</html>

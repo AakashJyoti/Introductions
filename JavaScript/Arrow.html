@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arrow Function</title>
+</head>
+
+<body>
+  <div class="container" id="para">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi nulla doloremque quo. Facere placeat, non dignissimos ad ea veniam a architecto saepe optio consectetur vitae omnis sapiente nam harum. Laborum.</p>
+  </div>
+  <script>
+    //setTimeout(() => {
+    //console.log("We are inside settimeout");
+    //}, 3000);
+
+    let sum = (a, b) => a + b;
+    let half = a => a / 2;
+
+    //let greet= ()=> console.log(`Good morning`);
+
+    let obj1 = {
+      names: ["Harry", "Rohan", "SkillF", "DjKhiladi"],
+      speak() {
+        this.names.forEach((student) => {
+          console.log("Kukdoo Koo " + student);
+        });
+      }
+    }
+    obj1.speak();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>First child</title>
+</head>
+<style type="text/css" media="all">
+*{
+  background-color: brown;
+}
+  .grid {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1rem;
+  }
+
+  .box {
+    color: black;
+    border: 2px solid black;
+    background-color: yellow;
+  }
+
+  .box:first-child {
+    grid-column: 1 /span 2;
+    grid-row: 1 /span 4;
+    background-color: yellowgreen;
+  }
+  .box:nth-child(3){
+    grid-column: 4 /span 2;
+    grid-row: 1 /span 12;
+    background-color: yellowgreen;
+  }
+  
+  .rat{
+    color: solid black;
+    border: 2px solid black;
+    background-color: yellow;
+  }
+  
+  .box:nth-child(20){
+    grid-column: 1 /span 5;
+    grid-row: 15 /span 3;
+    background-color: yellowgreen;
+  }
+  .box:nth-child(17){
+    grid-column: 2 /span 2;
+    grid-row: 8/span 2;
+    background-color: red;
+  }
+  .box:nth-child(5){
+    grid-column: 1 /span 3;
+    grid-row: 11 /span 3;
+    background-color: red;
+  }
+    .box:nth-child(6){
+    grid-row: 2 /span 2;
+    background-color: red;
+    }
+    
+      .box:nth-child(7){
+    grid-column: 1 /span 2;
+    grid-row: 6 /span 2;
+    background-color: blue;
+  }
+  
+  
+</style>
+
+<body>
+ <div class="grid">
+  <div class="box">Item-1</div>
+  <div class="box">Item-2</div>
+  <div class="box">Item-3</div>
+  <div class="box">Item-4</div>
+  <div class="box">Item-5</div>
+  <div class="box">Item-6</div>
+  <div class="box">Item-7</div>
+  <div class="box">Item-8</div>
+  <div class="box">Item-9</div>
+  <div class="box">Item-10</div>
+  <div class="box">Item-11</div>
+  <div class="box">Item-12</div>
+  <div class="box">Item-13</div>
+  <div class="box">Item-14</div>
+  <div class="box">Item-15</div>
+  <div class="box">Item-16</div>
+  <div class="box">Item-17</div>
+  <div class="box">Item-18</div>
+  <div class="box">Item-19</div>
+  <div class="box">Item-20</div>
+  <div class="rat">Shit-1</div>
+  <div class="rat">Shit-2</div>
+  <div class="rat">Shit-3</div>
+  <div class="rat">Shit-4</div>
+  <div class="rat">Shit-5</div>
+  <div class="rat">Shit-6</div>
+  <div class="rat">Shit-7</div>
+  <div class="rat">Shit-8</div>
+  <div class="rat">Shit-9</div>
+  <div class="rat">Shit-10</div>
+  <div class="rat">Shit-11</div>
+  <div class="rat">Shit-12</div>
+  <div class="rat">Shit-13</div>
+  <div class="rat">Shit-14</div>
+  <div class="rat">Shit-15</div>
+  <div class="rat">Shit-16</div>
+  <div class="rat">Shit-17</div>
+  <div class="rat">Shit-18</div>
+  <div class="rat">Shit-19</div>
+  <div class="rat">Shit-20</div>
+  <div class="rat">Shit-21</div>
+  <div class="rat">Shit-22</div>
+  <div class="rat">Shit-23</div>
+  <div class="rat">Shit-24</div>
+  <div class="rat">Shit-25</div>
+  <div class="rat">Shit-26</div>
+  <div class="rat">Shit-27</div>
+  <div class="rat">Shit-28</div>
+  <div class="rat">Shit-29</div>
+  <div class="rat">Shit-30</div>
+  </div>
+</body>
+
+</html>

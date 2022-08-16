@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Event and listing</title>
+</head>
+
+<body>
+  <div id="para">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi mollitia, rem? Placeat, ipsa repellendus inventore impedit laboriosam excepturi natus officiis mollitia, nostrum obcaecati blanditiis necessitatibus, cum fugiat nobis veritatis praesentium! Quisquam animi, ullam, alias quibusdam nesciunt iste rerum dolorem voluptates sed eveniet nulla! Modi magnam ipsam soluta, doloremque, deserunt accusamus ex nisi assumenda dolor vitae, sit architecto. Minus aspernatur commodi rem omnis tenetur nulla maiores vero incidunt, aperiam officia accusantium id dolore qui, sint?</p>
+  </div>
+  <button id="btn"onclick="toggleHide()">Show/Hide</button>
+  
+  <script>
+    function toggleHide(){
+      let btn= document.getElementById('btn');
+      let para= document.getElementById('para');
+      
+      if(para.style.display!='none'){
+        para.style.display='none';
+      }
+      else{
+        para.style.display='block';
+      }
+    }
+    
+   let para = document.getElementById('para');
+     para.addEventListener('mouseover', function run(){
+         console.log('Mouse Inside')
+     });
+
+      para.addEventListener('mouseout', function run(){
+          console.log('Mouse now went outside')
+       });
+  </script>
+
+</body>
+
+</html>

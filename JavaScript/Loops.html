@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loops</title>
+</head>
+
+<body>
+  <div class="dabba">
+    <h1 class="heading">
+      this os Headiing
+    </h1>
+    <p class="baketi">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum voluptas ab velit officia quos a, consequuntur, animi, eveniet vero ea sed voluptatibus, cumque! Deleniti reiciendis, sunt hic. Impedit, quasi et, laborum nam fuga sunt. Sit non omnis in, possimus, rem maxime? Soluta placeat, magni illum. Iure sit ratione molestiae illo aspernatur. Pariatur, sed totam culpa hic corporis, ipsam laborum voluptatibus tenetur repudiandae inventore explicabo, quibusdam placeat perspiciatis, saepe. Quibusdam enim repudiandae aliquid porro tempore est excepturi laudantium, consectetur at laborum rem obcaecati, ratione labore sed placeat incidunt, similique! Natus, nihil! Suscipit quod, porro deserunt fugit quidem autem. Optio necessitatibus odio atque aliquid tenetur deleniti consectetur! Voluptatibus omnis nam, molestias voluptatum autem sit praesentium qui ea optio odio beatae eaque tenetur, nesciunt esse exercitationem reiciendis, ullam nihil veniam mollitia quasi non aliquam vel rerum excepturi. Id fugiat doloribus corrupti voluptatem assumenda iste saepe repellat, recusandae inventore, modi incidunt vitae quo molestias totam velit provident praesentium officia nihil placeat sunt libero commodi ab nulla expedita pariatur. Optio eos aut beatae dolor, placeat repellat unde nostrum necessitatibus voluptatum odio autem consectetur perferendis nobis obcaecati numquam impedit repellendus. Facere quam maxime possimus, temporibus placeat eum perferendis, repellat nisi ipsum voluptatem quod autem, officia, dolore.
+    </p>
+  </div>
+  <script>
+    //For Loop
+    let i = 0;
+    for (i = 0; i < 3; i++) {
+      console.log(i);
+    }
+
+    let friends = ["Aakash", "Dinesh", "badal"];
+    for (let index = 0; index < friends.length; index++) {
+      console.log('Hello', friends[index]);
+    }
+    //For each
+    friends.forEach(function f(element) {
+      console.log("hello", element);
+    })
+
+    //For of Loop
+    for (element of friends) {
+      console.log("Hello", element);
+    }
+
+    //For in Loop
+    let employee = {
+      name: "Hariya",
+      salary: "12rs",
+      channel: "backchodi",
+    }
+    for (key in employee) {
+      console.log(`The ${key} of employee is ${employee[key]}`);
+    }
+
+    //while loop
+   let a = 0;
+    //while (i < 4) {
+     // console.log(`less`);
+     // a++;
+   // }
+    
+    //do while loop
+    do{
+      console.log(`${a} is less`);
+      a++;}
+      while(a<4);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,2 @@
+20220730	19:10:35	6e14c246-5d57-47be-b44d-5eecb3dd5af2	Error: Not allowed by CORS
+20220731	19:38:25	515adf1f-95aa-4a67-a46a-c4a8cd5d253c	TypeError: allowedOrigin.indexOf is not a function

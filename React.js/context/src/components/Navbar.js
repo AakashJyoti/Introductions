@@ -1,0 +1,22 @@
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import Logo from "../assets/logo/Hero.jpg";
+import { CartItems } from "../context/ContextProvider";
+
+const Navbar = () => {
+  const { cart } = useContext(CartItems);
+
+  return (
+    <div className="flex flex-row h-14 w-full bg-black">
+      <div>
+        <img src={Logo} className="w-30 h-14 pl-5" alt="" />
+      </div>
+
+      <div className="w-full flex justify-around items-center text-2xl font-bold text-white">
+        <Link to="/">Home</Link>
+        <Link to="/cart">Cart ({cart.length})</Link>
+      </div>
+    </div>
+  );
+};
+export default Navbar;
