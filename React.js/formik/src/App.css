@@ -1,0 +1,22 @@
+.App {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  padding-top: 10rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.block {
+  display: flex;
+  gap: 2rem;
+}
+
+.block label {
+  width: 8rem;
+}
+
+.block input {
+  height: 20px;
+  padding: 2px 5px;
+}
