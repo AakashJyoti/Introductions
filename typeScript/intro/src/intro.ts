@@ -95,8 +95,87 @@ function addNum(x: number, y: number): number {
   return x + y;
 }
 
+// void
+
 function shoutOut(message: string | number): void {
-  console.log(message);
+  // console.log(message);
 }
 
 shoutOut("Bhag");
+
+// // --- Interfaces
+
+interface UserInterface {
+  readonly id: number;
+  name: string;
+  age?: number;
+}
+
+const user3: UserInterface = {
+  id: 3,
+  name: "Jabba",
+};
+
+// type can be used with Unions and Premetives
+// use ? when valus in not defined
+// use readonly when value is not wanna to be changed
+
+interface Mathfun {
+  (x: number, y: number): number;
+}
+
+const add: Mathfun = (x: number, y: number): number => x + y;
+const sub: Mathfun = (x: number, y: number): number => x - y;
+
+//  // --- Clases
+
+interface PersonInterface {
+  id: number;
+  name: string;
+  register(): string;
+}
+
+class Person implements PersonInterface {
+  id: number;
+  name: string;
+
+  constructor(id: number, name: string) {
+    this.id = id;
+    this.name = name;
+  }
+
+  register() {
+    return `${this.name} is now register`;
+  }
+}
+
+const brad = new Person(2, "Nemora Nemora");
+const jj = new Person(7, "typescript Nemora");
+
+// can be set Public, Private, Protected
+
+console.log(brad, jj);
+console.log(brad.register());
+
+// --- SubClasses
+
+class Employee extends Person {
+  position: string;
+
+  constructor(id: number, name: string, position: string) {
+    super(id, name);
+    this.position = position;
+  }
+}
+
+const emp = new Employee(3, "Navneet", "Chai wala");
+
+//  // --- Genierics
+
+function getArray<T>(items: T[]): T[] {
+  return new Array().concat(items);
+}
+
+let numArray = getArray([1, 2, 3, 4]);
+let strArray = getArray(["abba", "Dabbba", "jabba"]);
+

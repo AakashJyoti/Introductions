@@ -65,7 +65,42 @@ let customerId2 = cid; // Another way
 function addNum(x, y) {
     return x + y;
 }
+// void
 function shoutOut(message) {
-    console.log(message);
+    // console.log(message);
 }
 shoutOut("Bhag");
+const user3 = {
+    id: 3,
+    name: "Jabba",
+};
+const add = (x, y) => x + y;
+const sub = (x, y) => x - y;
+class Person {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    register() {
+        return `${this.name} is now register`;
+    }
+}
+const brad = new Person(2, "Nemora Nemora");
+const jj = new Person(7, "typescript Nemora");
+// can be set Public, Private, Protected
+console.log(brad, jj);
+console.log(brad.register());
+// --- SubClasses
+class Employee extends Person {
+    constructor(id, name, position) {
+        super(id, name);
+        this.position = position;
+    }
+}
+const emp = new Employee(3, "Navneet", "Chai wala");
+//  // --- Genierics
+function getArray(items) {
+    return new Array().concat(items);
+}
+let numArray = getArray([1, 2, 3, 4]);
+let strArray = getArray(["abba", "Dabbba", "jabba"]);
