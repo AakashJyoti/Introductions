@@ -7,7 +7,6 @@ router.get("/", (req, res) => {
   res.send("Hello World from router");
 });
 
-
 //  --- Signin Routes---
 router.post("/signin", async (req, res) => {
   const { name, email, phone, work, password, cpassword } = req.body;
@@ -20,17 +19,17 @@ router.post("/signin", async (req, res) => {
     const userExists = await User.findOne({ email: email });
     if (userExists) {
       return res.status(422).json({ error: "Email already Exists" });
+    } else if (password != cpassword) {
+      return res.status(422).json({ error: "Invalid Passoword Confirmation" });
+    } else {
+      const user = new User({ name, email, phone, work, password, cpassword });
+      await user.save();
+      res.status(201).json({ message: "New User Created" });
     }
-
-    const user = new User({ name, email, phone, work, password, cpassword });
-    await user.save();
-
-    res.status(201).json({ message: "New User Created" });
   } catch (error) {
     console.log(error);
   }
 });
-
 
 // --- Login Routes ---
 router.post("/login", async (req, res) => {
