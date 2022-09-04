@@ -1,3 +1,10 @@
+// --- Structures ---
+// Array
+// Stack
+// Queue
+// Tree
+// Graph
+
 // --- operations ---
 // traversing
 // insertion
@@ -6,15 +13,22 @@
 // sorting
 // merge
 
-// --- Structures ---
-// Array
-// Stack
-// Queue
-// Tree
-// Graph
-
-// let a = [2, 3, 4, 5, 6];
-
-// for (const i of a) {
-//   console.log(i);
-// }
+// // Array
+// push()
+// pop()
+// shift()
+// unshiift()
+// short()
+// reverse()
+// (...array)
+// concat(arr1, arr2)
+// splice()
+// slice()
+// new Set()
+// map(()=>{})
+// forEach(){}
+// reduce(()=> {})
+// filter(() =>{})
+// join()
+// includes()
+// toString()
