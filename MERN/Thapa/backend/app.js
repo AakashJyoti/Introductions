@@ -27,14 +27,6 @@ app.get("/contact", (req, res) => {
   res.send("Hello World from Contact");
 });
 
-app.get("/login", (req, res) => {
-  res.send("Hello World from Login");
-});
-
-app.get("/signin", (req, res) => {
-  res.send("Hello World from SignIn");
-});
-
 app.listen(PORT, () => {
   console.log(`Server running on port: ${PORT}`);
 });
