@@ -1,0 +1,40 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "M31s",
+      "color": "black",
+      "price": 15000,
+      "catergory": "mobile",
+      "brand": "Samsung",
+      "image": "https://cdn.w600.comps.canstockphoto.com/best-dummy-mobile-image-stock-photo_csp55271621.jpg"
+    },
+    {
+      "id": 2,
+      "name": "M21",
+      "color": "black",
+      "price": 12000,
+      "catergory": "mobile",
+      "brand": "Samsung",
+      "image": "https://cdn.w600.comps.canstockphoto.com/best-dummy-mobile-image-stock-photo_csp55271621.jpg"
+    },
+    {
+      "id": 3,
+      "name": "S21",
+      "color": "violet",
+      "price": 70000,
+      "catergory": "mobile",
+      "brand": "Samsung",
+      "image": "https://cdn.w600.comps.canstockphoto.com/best-dummy-mobile-image-stock-photo_csp55271621.jpg"
+    },
+    {
+      "id": 4,
+      "name": "lepad112",
+      "color": "silver",
+      "price": 80000,
+      "catergory": "laptop",
+      "brand": "Lonovo",
+      "image": "https://cdn.w600.comps.canstockphoto.com/best-dummy-mobile-image-stock-photo_csp55271621.jpg"
+    }
+  ]
+}
