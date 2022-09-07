@@ -124,4 +124,33 @@ const reverseString = (str) => {
   return str.split("").reverse().join("");
 };
 
-console.log(reverseString("bayan"));
+// console.log(reverseString("bayan"));
+
+// object to array
+
+const val = { name: "Aakash", age: 24, education: "Web dev" };
+
+// console.log(Object.keys(val));
+// console.log(Object.values(val));
+// console.log(Object.entries(val));
+
+// array to object
+
+const ja = ["a", "b", "c", " d", "e"];
+const ho = { ...ja };
+
+// console.log(ho)
+
+const h = ["a", "b", "c"].reduce((a, v) => ({ ...a, [v]: v }), {});
+// console.log(h);
+
+function toObject(arr) {
+  var rv = {};
+  for (var i = 0; i < arr.length; ++i) {
+    rv[ja[i]] = arr[i];
+  }
+  return rv;
+}
+
+console.log(toObject(["a", "b", "c", "hi", "he"]));
+
