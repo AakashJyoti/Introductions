@@ -1,6 +1,36 @@
+import { useEffect } from "react";
 import profilePic from "../assets/profile.jpg";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
+  const cofirmingJwt = async () => {
+    try {
+      const res = await fetch("/about", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
+      const data = await res.json();
+
+      console.log(data);
+      if (res.status !== 200) {
+        const error = new Error(res.error);
+        throw error;
+      }
+    } catch (error) {
+      console.log(error);
+      navigate("/login");
+    }
+  };
+
+  useEffect(() => {
+    cofirmingJwt();
+  }, []);
+
   return (
     <div className="w-full flex items-center justify-center bg-blue-200 flex-col gap-10 h-screen ">
       <div className="w-2/4 bg-white h-2/4 rounded-lg shadow-lg flex p-10 gap-20">

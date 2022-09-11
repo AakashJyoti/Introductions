@@ -2,6 +2,8 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const connectDB = require("./config/dbConn");
+const cokie = require("cookie-parser");
+app.use(cokie);
 
 const PORT = process.env.PORT;
 connectDB();

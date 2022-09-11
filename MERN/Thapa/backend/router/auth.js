@@ -72,7 +72,8 @@ router.post("/login", async (req, res) => {
 
 // --- About us Routes ---
 router.get("/about", authenticate, (req, res) => {
-  res.send("Hello World from About");
+  console.log("Hello about");
+  res.send(req.rootUser);
 });
 
 module.exports = router;

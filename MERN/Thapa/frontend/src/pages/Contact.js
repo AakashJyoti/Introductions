@@ -24,14 +24,14 @@ const Contact = () => {
                 type="text"
                 placeholder="Enter Name"
                 className="focus:outline-none"
-                required="true"
+                required={true}
               />
             </div>
             <div className="border rounded py-2 px-4 border-blue-300 shadow-sm shadow-blue-300">
               <input
                 type="email"
                 placeholder="Enter Email"
-                required="true"
+                required={true}
                 className="focus:outline-none"
               />
             </div>
@@ -39,7 +39,7 @@ const Contact = () => {
               <input
                 type="number"
                 placeholder="Enter Phone Number"
-                required="true"
+                required={true}
                 className="focus:outline-none"
               />
             </div>
@@ -50,7 +50,7 @@ const Contact = () => {
               name="message"
               cols="30"
               rows="10"
-              required="true"
+              required={true}
               placeholder="Enter your message"
             />
           </div>
