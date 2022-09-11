@@ -14,14 +14,9 @@ app.use(require("./router/auth"));
 
 // Middleware
 
-const middleware = (req, res, next) => {
-  console.log("Hello from Middleware");
-  next();
-};
-
-app.get("/about", middleware, (req, res) => {
-  res.send("Hello World from About");
-});
+// app.get("/about", middleware, (req, res) => {
+//   res.send("Hello World from About");
+// });
 
 app.get("/contact", (req, res) => {
   res.send("Hello World from Contact");
