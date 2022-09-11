@@ -9,9 +9,9 @@ const About = () => {
           <img
             src={profilePic}
             alt="profile-pic"
-            className="overflow-hidden rounded w-40 "
+            className="overflow-hidden rounded h-40 w-40"
           />
-          <div>
+          <div className="font-medium">
             {/* texh sstack */}
             <p>React.js</p>
             <p>Next.js</p>
@@ -20,28 +20,36 @@ const About = () => {
             <p>JavaScript</p>
           </div>
         </div>
-        <div className="flex flex-col gap-28 w-full">
+        <div className="flex flex-col gap-20 w-full">
           {/* profile info */}
           <div className="flex justify-between w-full">
             {/* name and credentials */}
             <div>
-              <p>Aakash Jyoti</p>
+              <p className="text-3xl font-semibold">Aakash Jyoti</p>
               <p>Web Developer</p>
               <p>
-                <span>Ranking</span> <span>1/10</span>
+                <span className="text-xs">Ranking:</span>{" "}
+                <span className="text-blue-700 font-semibold">1/10</span>
               </p>
             </div>
             <div>
-              <button>Edit Profile</button>
+              <button className="py-2 px-3 bg-blue-600 rounded-full text-white shadow-md shadow-blue-300 hover:bg-blue-400">
+                Edit Profile
+              </button>
             </div>
           </div>
           <div>
             {/* user Data */}
-            <p>
-              <span>About</span> <span>Timeline</span>{" "}
+            <p className="border-b-2">
+              <span className="mr-3 font-semibold text-xl border-b-2 border-blue-600 cursor-pointer">
+                About
+              </span>{" "}
+              <span className="font-semibold text-xl text-blue-600 cursor-pointer">
+                Timeline
+              </span>
             </p>
-            <div className="flex gap-40" >
-              <div>
+            <div className="flex gap-36 pt-2">
+              <div className="font-medium">
                 {/* user list */}
                 <p>User Id</p>
                 <p>Name</p>
@@ -49,13 +57,13 @@ const About = () => {
                 <p>Phone</p>
                 <p>Profession</p>
               </div>
-              <div>
+              <div className="font-medium text-blue-700">
                 {/* user info */}
                 <p>98734978937432</p>
                 <p>Aakash Jyoti</p>
                 <p>jabba@gmail.com</p>
                 <p>9999999999</p>
-                <p>Web dDeveloper</p>
+                <p>Web Developer</p>
               </div>
             </div>
           </div>
