@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+.login_page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+.login_box {
+  max-width: 800px;
+  width: 60%;
+  height: 701px;
+  background: rgba(255, 255, 255, 0.93);
+  box-shadow: 22px 21px 35px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem auto;
+}
+
+.from_part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+
+.from_part img {
+  padding-top: 43px;
+}
+
+.title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 33px;
+  text-align: center;
+  color: #000000;
+  padding-top: 37px;
+}
+
+.login_form {
+  padding-top: 49px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.login_input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.login_input p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.login_input input {
+  border: 1px solid #484848;
+  border-radius: 10px;
+  width: 268px;
+  height: 43px;
+  padding-left: 8px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.login_button {
+  width: 233px;
+  height: 43px;
+  background: #0f3561;
+  border-radius: 10px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-top: 30px;
+  border: none;
+}
+
+.forgot_pass {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 25px;
+  color: #0f3561;
+}
+.img_part {
+  width: 50%;
+  height: 100%;
+}
+.img_part img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+  .login_box {
+    width: 800px;
+    height: 600px;
+    margin: 4rem auto;
+  }
+}
+@media (max-width: 1080px) {
+  .login_input input {
+    width: 200px;
+    height: 35px;
+  }
+  .login_button {
+    width: 200px;
+    height: 35px;
+  }
+  .forgot_pass {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .login_box {
+    width: 600px;
+    height: 450px;
+    margin: 4rem auto;
+  }
+  .from_part .img_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .from_part img {
+    padding-top: 10px;
+    width: 80px;
+  }
+  .title {
+    padding-top: 20px;
+    font-size: 24px;
+  }
+  .login_form {
+    padding-top: 25px;
+  }
+  .login_input p {
+    font-size: 15px;
+  }
+  .login_input input {
+    width: 180px;
+    height: 25px;
+    font-size: 14px;
+  }
+  .login_button {
+    width: 180px;
+    height: 25px;
+    font-size: 12px;
+    margin-top: 20px;
+  }
+  .forgot_pass {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .login_page {
+    height: 90vh;
+  }
+  .login_box {
+    width: 350px;
+    margin: auto;
+  }
+  .img_part {
+    display: none;
+  }
+  .from_part {
+    width: 100%;
+  }
+  .login_input input {
+    width: 200px;
+    height: 30px;
+  }
+  .login_button {
+    height: 30px;
+    width: 200px;
+  }
+}
