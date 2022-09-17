@@ -32,6 +32,9 @@ React Redux Actions :-
 React Redux Reducer :-
 
 1. Reducers are pure javaScript functions :-
-   . Depends only on its aguments
-   . Does not change any of its arguments
-   . Does not depends any external variables
+   a. Depends only on its aguments
+   b. Does not change any of its arguments
+   c. Does not depends any external variables
+
+eg:-
+    const 
