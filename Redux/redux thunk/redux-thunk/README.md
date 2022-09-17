@@ -68,6 +68,7 @@ Connect Components with Redux :-
 Adding Store to Projects
 
 import { configureStore } from "@reduxjs/toolkit";
+
 const store = configureStore({
   reducer: rootReducer,
 });
