@@ -1,30 +1,37 @@
-Action ---> Dispatch ---> Reducer ---> Store 
+Action ---> Dispatch ---> Reducer ---> Store
 
 React Redux Actions :-
 
 1. Change current state in Application
 2. Package of information which is passed to store
 3. Actions are plain JS objects
-   eg:- 
+   eg:-
    payload is the information or data for action
    const addUser = {
-        'type': "ADD_USER", 
-        'payload':{
-            'name' : "Aakash",
-            'email' : "aakash@gmail.com"
-        }
-    }
+   'type': "ADD_USER",
+   'payload':{
+   'name' : "Aakash",
+   'email' : "aakash@gmail.com"
+   }
+   }
 
 4. Must Use Action Creators
-    eg:-
-    export const addUser = (user) => ({
-        type: "ADD_USER",
-        payload: user,
-    });
+   eg:-
+   export const addUser = (user) => ({
+   type: "ADD_USER",
+   payload: user,
+   });
 
-5. UseDiapatch to send Action to Reducer 
-    Located in component of any page
-    eg:-
-        dispatch(addUser())
+5. UseDiapatch to send Action to Reducer
+   Located in component of any page
+   eg:-
+   dispatch(addUser())
 
 6. Try to get different Action Files for different components
+
+React Redux Reducer :-
+
+1. Reducers are pure javaScript functions :-
+   . Depends only on its aguments
+   . Does not change any of its arguments
+   . Does not depends any external variables
