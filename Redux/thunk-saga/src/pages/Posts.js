@@ -1,17 +1,23 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addPost } from "../slices/postSlice";
+import ReactionButton from "../components/ReactionButton";
+import Users from "../components/Users";
+// import { addPost } from "../slices/postSlice";
+import { addPostPre } from "../slices/postSlice";
 
 const Posts = () => {
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.posts);
+  const users = useSelector((state) => state.users);
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
+  const [userId, setUserId] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title && desc) {
-      dispatch(addPost({ id: posts.length + 1, title, desc }));
+      // dispatch(addPost({ id: posts.length + 1, title, desc }));
+      dispatch(addPostPre(title, desc, userId));
       setTitle("");
       setDesc("");
     }
@@ -52,6 +58,7 @@ const Posts = () => {
               borderRadius: "10px",
             }}
           />
+
           <textarea
             value={desc}
             onChange={(e) => setDesc(e.target.value)}
@@ -66,6 +73,28 @@ const Posts = () => {
               resize: "none",
             }}
           />
+
+          <select
+            value={userId}
+            onChange={(e) => setUserId(e.target.value)}
+            style={{
+              padding: "5px 10px",
+              fontSize: "16px",
+              width: "10rem",
+              height: "2rem",
+              borderRadius: "10px",
+              textAlign: "center",
+            }}
+          >
+            {users.map((user) => {
+              return (
+                <option key={user.id} value={user.id}>
+                  {user.name}
+                </option>
+              );
+            })}
+          </select>
+
           <button
             style={{
               width: "20rem",
@@ -111,6 +140,8 @@ const Posts = () => {
               >
                 <h3>{post.title}</h3>
                 <p>{post.desc}</p>
+                <Users userId={post.userId} />
+                <ReactionButton post={post} />
               </div>
             );
           })}
