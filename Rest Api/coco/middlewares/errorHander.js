@@ -1,5 +1,5 @@
-import { DEBUG_MODE } from "../config";
 import { ValidationError } from "joi";
+import { DEBUG_MODE } from "../config";
 import CustomErrorHandler from "../services/customError";
 
 const errorHandler = (error, req, res, next) => {

@@ -9,10 +9,9 @@ List of Tasks:-
 - Get single product
 - Delete a product
 
-
 Check list to handle request:-
 
-1. Check List of Register user:- 
+1. Check List of Register user:-
 
 - validate the request
 - authorized the request
@@ -24,3 +23,4 @@ Check list to handle request:-
 
 Break 1 : - 1:05
 Break 2 : - 1:45
+Break 3 : - 2:08
