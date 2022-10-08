@@ -2,7 +2,7 @@ List of Tasks:-
 
 - Register a user
 - Login a user
-- Who am I
+- Get user Data
 - Add new product
 - Update a product
 - Get all product
@@ -13,14 +13,28 @@ Check list to handle request:-
 
 1. Check List of Register user:-
 
-- validate the request
-- authorized the request
-- check if the user in data is already exists
-- prepare modal
-- store in database
-- generate jwt token
-- send response
+- Validate the request
+- Authorized the request
+- Check if the user in data is already exists
+- Prepare modal
+- Store in database
+- Generate jwt token
+- Send response
 
-Break 1 : - 1:05
-Break 2 : - 1:45
-Break 3 : - 2:08
+2. Check List of Login user:-
+
+- Validate the request
+- Check the user existace in Database
+- Compare user password
+- Generate JWT token
+- Send response
+
+3. Check List of Get user data from Database:-
+
+For getting user info from Auth JWT token user "Authorization" "Bearer `token`" in request header
+
+Breakes:-
+
+- Break 1 : - 1:05
+- Break 2 : - 1:45
+- Break 3 : - 2:08
