@@ -33,8 +33,12 @@ Check list to handle request:-
 
 For getting user info from Auth JWT token user "Authorization" "Bearer `token`" in request header
 
+- Add an middle ware to extract and Authenticate Token
+- Filter unwanted field comming from DB
+- Send Response
+
 Breakes:-
 
 - Break 1 : - 1:05
 - Break 2 : - 1:45
-- Break 3 : - 2:08
+- Break 3 : - 2:34
