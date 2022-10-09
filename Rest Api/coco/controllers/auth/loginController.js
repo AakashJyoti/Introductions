@@ -56,6 +56,29 @@ const loginController = {
       return next(error);
     }
   },
+
+  async logout(req, res, next) {
+    // Validation
+    const refreshSchema = Joi.object({
+      refresh_token: Joi.string().required(),
+    });
+
+    const { error } = refreshSchema.validate(req.body);
+
+    if (error) {
+      return next(error);
+    }
+
+    // Delete refresh token form Database
+    try {
+      await RefreshToken.deleteOne({ token: req.body.refresh_token });
+    } catch (error) {
+      return next(new Error("Somting went wrong in the database"));
+    }
+
+    // Response
+    res.status(200).json({ message: "User Logout Successful" });
+  },
 };
 
 export default loginController;

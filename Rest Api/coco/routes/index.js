@@ -12,5 +12,6 @@ router.post("/api/register", registerController.register);
 router.post("/api/login", loginController.login);
 router.get("/api/user", auth, userController.user);
 router.post("/api/refresh", refreshControlller.refresh);
+router.post("/api/logout", auth, loginController.logout);
 
 export default router;

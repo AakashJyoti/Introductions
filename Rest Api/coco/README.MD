@@ -50,6 +50,11 @@ Refresh token must have unique key differ from create key
 - Generate new Token
 - Send Response
 
+5. Logout User
+
+- Validate the request
+- Delete Refresh Token from Database
+- Send Response
 
 Breakes:-
 
