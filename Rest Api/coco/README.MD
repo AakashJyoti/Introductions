@@ -3,6 +3,8 @@ List of Tasks:-
 - Register a user
 - Login a user
 - Get user Data
+- Refresh the Token
+- Logout a user
 - Add new product
 - Update a product
 - Get all product
@@ -36,6 +38,18 @@ For getting user info from Auth JWT token user "Authorization" "Bearer `token`" 
 - Add an middle ware to extract and Authenticate Token
 - Filter unwanted field comming from DB
 - Send Response
+
+4. Refresh token :-
+
+Refresh token must have unique key differ from create key
+
+- Validate the request
+- Check the Token in Database
+- Verify Token
+- Verify User
+- Generate new Token
+- Send Response
+
 
 Breakes:-
 
