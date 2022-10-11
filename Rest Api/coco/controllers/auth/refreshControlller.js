@@ -18,14 +18,13 @@ const refreshControlller = {
     }
 
     // Check token in database
-
     let refreshToken;
 
     try {
       refreshToken = await RefreshToken.findOne({
         token: req.body.refresh_token,
       });
-    //   console.log(refreshToken);
+      //   console.log(refreshToken);
       if (!refreshToken) {
         return next(
           CustomErrorHandler.unAuthorized("Invalid refresh Token Received")
