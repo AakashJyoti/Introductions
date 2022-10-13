@@ -1,0 +1,24 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.post {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.nav .active {
+  color: red;
+}
