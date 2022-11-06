@@ -1,9 +1,32 @@
-let username = "coco";
-console.log(username);
+// Basic defines
+let myName: string;
+let cost: number;
+let isLoading: boolean;
+let album: any;
 
-let a: number = 12;
-let b: number = 6;
-let c: number = 2;
+myName = "Coco";
+cost = 9;
+isLoading = false;
+album = true;
 
-console.log(a / b);
-console.log(c * b);
+// Union defines
+let postId: number | string;
+let isActive: number | boolean;
+let getValue: string | boolean;
+
+postId = 89;
+postId = "duster";
+isActive = 0;
+isActive = true;
+getValue = "ram";
+getValue = false;
+
+// function
+const sum = (a: boolean, b: string) => a + b;
+
+console.log(sum(true, "7"));
+
+// type REGEX
+let re: RegExp = /\w+/g;
+// re = regular expression
+// /g = global
