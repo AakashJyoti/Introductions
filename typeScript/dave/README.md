@@ -54,3 +54,53 @@ Unlike most TypeScript features, Enums are not a type-level addition but somethi
   B,
   A,
   }
+
+## Aliases
+
+Is basically using predefined type to create a new type.
+
+- type stringOrNumberArray = (string | number)[]
+- type Guitarist = {
+  name?: string;
+  album: stringOrNumberArray
+  };
+
+Type and interfaces are deferent from each other
+
+- interface PostId = stringOrNumberArray
+
+## Literal types
+
+- let userName: "Abba" | "Dabba" | "Jabba"
+- userName = "Abba"
+
+## Function Define
+
+There are 3 way to define types
+First one is:- (unable to define undefined value)
+
+- let Subtract = (c: number, d: number): number => c - d
+
+Second is:- (unable to define undefined value)
+
+- type mathFunction = (a: number, b: number) => number
+- let multiply: mathFunction = (c, d) => c \* d
+
+Third is :- (undefined value can be defined)
+
+- interface mathFunction {
+  (a: number, b: number): number
+  }
+- let multiplyAliases: mathFunction = (a, b) => a + b
+
+## Rest parameters
+
+- const total = (...numS: number[]): number => numS.reduce((prev, curr) => prev + curr)
+
+## Never Type
+
+Its defined only while handling error and during infinite loop
+
+- const createError = (errMsg: string): never => {
+  throw new Error(errMsg);
+  };
