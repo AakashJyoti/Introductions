@@ -1,5 +1,7 @@
 # Basic TypeScript:-
 
+Make typescript to watch all your changes :- tsc -w
+
 ## Basic defines
 
 - let myName: string
@@ -104,3 +106,9 @@ Its defined only while handling error and during infinite loop
 - const createError = (errMsg: string): never => {
   throw new Error(errMsg);
   };
+
+## Type assertions
+
+- let a: One = "hello";
+- let b = a as Two; //less specific
+- let c = a as Three; // more specific
