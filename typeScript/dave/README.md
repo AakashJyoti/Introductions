@@ -73,7 +73,7 @@ Type and interfaces are deferent from each other
 
 ## Literal types
 
-- let userName: "Abba" | "Dabba" | "Jabba"
+- let userName: "Abba" | "Two" | "Three"
 - userName = "Abba"
 
 ## Function Define
@@ -97,7 +97,7 @@ Third is :- (undefined value can be defined)
 
 ## Rest parameters
 
-- const total = (...numS: number[]): number => numS.reduce((prev, curr) => prev + curr)
+- const total = (...numS: number[]): number => numS.reduce((prev, current) => prev + current)
 
 ## Never Type
 
@@ -112,3 +112,7 @@ Its defined only while handling error and during infinite loop
 - let a: One = "hello";
 - let b = a as Two; //less specific
 - let c = a as Three; // more specific
+
+## Index Signature
+
+- interface TransactionObj {[index: string]: number}
