@@ -116,3 +116,8 @@ Its defined only while handling error and during infinite loop
 ## Index Signature
 
 - interface TransactionObj {[index: string]: number}
+
+## Generics
+Its basically make function able to run for any type:-
+- const stringEcho = (arg: string): string => arg; // only String type
+- const echo = <T>(arg: T): T => arg; // with all parameters
