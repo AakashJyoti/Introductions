@@ -42,6 +42,7 @@
 // const userId: ID = 12;
 
 // --- Interfaces ---
+// -- Example 1
 // interface Transaction {
 //   payerAccountNumber: number;
 //   payeeAccountNumber: number;
@@ -77,6 +78,7 @@
 // };
 
 // -- Reuse interfaces or Extend interface
+// -- Example 1
 // interface Book {
 //   name: string;
 //   price: number;
@@ -100,7 +102,7 @@
 // };
 
 // -- Merging interface
-
+// -- Example 1
 // interface Book {
 //   name: string;
 //   price: number;
@@ -121,6 +123,7 @@
 // -- primitive are for types
 // -- objects are for interface
 
+// -- Example 2
 // type Book = {
 //   name: string;
 //   price: number;
@@ -132,6 +135,7 @@
 // interface SanitizedString extends string {}
 
 // --- Unions ---
+// -- Example 1
 // narrowing == type check
 // type ID = number | string;
 // const printId = (id: ID): void =>
@@ -201,7 +205,8 @@
 //   age: number;
 // }
 
-// How not to do
+// -- How not to do
+// -- Example 1
 // const fetchPostData = async (path: string): Promise<IPost[]> => {
 //   const res = await fetch(`http://example.com${path}`);
 //   const data = await res.json();
@@ -226,7 +231,8 @@
 //   users[0].age;
 // })();
 
-// How pros do things
+// -- How pros do things
+// -- Example 2
 // const fetchData = async <ResultType>(path: string): Promise<ResultType> => {
 //   const res = await fetch(`http://example.com${path}`);
 //   const data = await res.json();
