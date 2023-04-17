@@ -1,0 +1,13 @@
+body {
+  margin: 0%;
+  margin-left: 20%;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(252, 3, 3);
+  margin: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
+}
