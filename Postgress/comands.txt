@@ -1,0 +1,59 @@
+\dt = describe for only table
+\d = describe
+\d {table name} = to show table
+\l = list of database
+\q = to quit
+\x = table display orientation
+\c {database name} = to switch database
+\i {location} = install commands form file
+
+CREATE DATABASE {database name};
+
+psql -h localhost -p 5432 -U postgres
+
+DROP DATABASE {database name}
+
+CREATE TABLE {table name}(key keyType);
+
+DROP TABLE {table name}
+
+DELETE FROM person WHERE id = 1;
+
+example:-
+CREATE TABLE person(
+  id BIGSERIAL NOT NULL PRIMARY KEY,
+  first_name VARCHAR(50) NOT NULL,
+  last_name VARCHAR(50) NOT NULL,
+  gender VARCHAR(10) NOT NULL,
+  date_of_birth DATE NOT NULL,
+  email VARCHAR(150)
+);
+
+INSERT INTO person (first_person, last_name, gender, data_of_birth)
+VALUES ('Jabba', 'Cooper', 'Male', date '1998-05-10');
+
+SELECT * FROM person;
+
+\i C:/User/ooo/Dewnloads/person.sql;
+
+SELECT email, COUNT(*) FROM person GROUP BY email HAVING COUNT(*) > 1;
+
+SELECT * FORM person WHERE email = 'newmail@gmail.com';
+
+ALTER TABLE person ADD CONSTRAINT unique_val UNIQUE (email);
+
+ALTER TABLE person DROP CONSTRAINT unique_val;
+
+ALTER TABLE person ADD CONSTRAINT gender_count CHECK (gender = 'Female' OR gender = 'Male');
+
+DELETE FROM person WHERE gender = 'Agandar';
+
+UPDATE person SET first_name = 'Aakash', last_name = 'jyoti' WHERE id = 2;
+
+ON CONFLICT (id) DO UPDATE SET email = EXCLUDE.email;
+
+JOIN car ON person.id = car.id;
+
+LEFT JOIN car ON person.id = car.id;
+
+RIGHT JOIN car ON person.id = car.id;
