@@ -1,52 +1,41 @@
 * {
   margin: 0;
   padding: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  color: white;
+  box-sizing: border-box;
+  font-family: cursive;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #0e0e0f;
+  min-height: 100vh;
+  font-size: 2rem;
+  display: grid;
+  place-content: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+input,
+button {
+  font: inherit;
+  padding: 0.5rem;
 }
 
-.App {
-  width: 100vw;
-  height: 100vh;
+section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.counter p {
-  font-size: 3rem;
+input {
   text-align: center;
+  max-width: 2.5em;
 }
 
-.counter div {
-  display: flex;
-  gap: 10px;
+button {
+  font-size: 2rem;
+  margin: 0.5em 0 0.5em 0.5em;
+  min-width: 2em;
 }
 
-.counter button {
-  padding: 10px 15px;
-  font-size: 1rem;
-  cursor: pointer;
+button:first-child {
+  margin-left: 0;
 }

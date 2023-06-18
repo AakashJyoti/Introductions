@@ -1,57 +1,57 @@
-import { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   increment,
   decrement,
   reset,
-  incrementByAmount,
-  decrementByAmount,
-} from "../features/counter/counterSlice";
+  incrementByValue,
+  decrementByValue,
+} from "../redux/features/counter/counterSlice";
+import { useState } from "react";
 
-const Counter = () => {
-  const count = useSelector((state) => state.counter.count);
+export default function Counter() {
   const dispatch = useDispatch();
-  const [incAmount, setIncAmount] = useState(0);
-  const [decAmount, setDecAmount] = useState(0);
+  const { count } = useSelector((state) => state.counter);
+  const [number, setNumber] = useState("");
 
-  const resetValue = () => {
-    setDecAmount(0);
-    setIncAmount(0);
+  const onIncrement = () => {
+    dispatch(increment());
+  };
+
+  const onDecrement = () => {
+    dispatch(decrement());
+  };
+
+  const onReset = () => {
     dispatch(reset());
   };
 
-  const addValue = Number(incAmount) || 0;
-  const removeValue = Number(decAmount) || 0;
+  const onIncrementByValue = () => {
+    if (!parseInt(number)) return;
+    dispatch(incrementByValue(parseInt(number)));
+    setNumber("");
+  };
+
+  const onDecrementByValue = () => {
+    if (!parseInt(number)) return;
+    dispatch(decrementByValue(parseInt(number)));
+    setNumber("");
+  };
 
   return (
-    <section className="counter">
-      <p>{count}</p>
-      <div>
-        <button onClick={() => dispatch(increment())}>+</button>
-        <button onClick={() => resetValue()}>Reset</button>
-        <button onClick={() => dispatch(decrement())}>-</button>
-      </div>
-      <div>
-        <input
-          type="number"
-          value={incAmount}
-          onChange={(e) => setIncAmount(e.target.value)}
-        />
-        <button onClick={() => dispatch(incrementByAmount(addValue))}>
-          Add
-        </button>
-      </div>
-      <div>
-        <input
-          type="number"
-          value={decAmount}
-          onChange={(e) => setDecAmount(e.target.value)}
-        />
-        <button onClick={() => dispatch(decrementByAmount(removeValue))}>
-          Remove
-        </button>
-      </div>
-    </section>
+    <div>
+      <p>Count : {count}</p>
+      <button onClick={onIncrement}>Increment</button>
+      <button onClick={onDecrement}>Decrement</button>
+      <button onClick={onReset}>Reset</button>
+
+      <br />
+      <input
+        type="number"
+        value={number}
+        onChange={(e) => setNumber(e.target.value)}
+      />
+      <button onClick={onIncrementByValue}>+</button>
+      <button onClick={onDecrementByValue}>-</button>
+    </div>
   );
-};
-export default Counter;
+}

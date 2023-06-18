@@ -9,19 +9,19 @@ export const counterSlice = createSlice({
   initialState,
   reducers: {
     increment: (state) => {
-      state.count += 1;
+      state.count = state.count + 1;
     },
     decrement: (state) => {
-      state.count -= 1;
+      state.count = state.count - 1;
     },
-    reset: (state) => {
-      state.count = 0;
+    reset: () => {
+      return initialState;
     },
-    incrementByAmount: (state, action) => {
-      state.count += action.payload;
+    incrementByValue: (state, action) => {
+      state.count = state.count + action.payload;
     },
-    decrementByAmount: (state, action) => {
-      state.count -= action.payload;
+    decrementByValue: (state, action) => {
+      state.count = state.count - action.payload;
     },
   },
 });
@@ -30,8 +30,7 @@ export const {
   increment,
   decrement,
   reset,
-  decrementByAmount,
-  incrementByAmount,
+  incrementByValue,
+  decrementByValue,
 } = counterSlice.actions;
-
 export default counterSlice.reducer;
