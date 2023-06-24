@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1rem;
+  display: grid;
+  place-content: center;
+}
+
+input,
+button {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  font-size: 1rem;
+  margin: 0.5em;
+  min-width: 2em;
+}
+
+button:first-child {
+  margin-left: 0;
+}
