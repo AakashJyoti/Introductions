@@ -2,14 +2,15 @@ import { Link } from "react-router-dom";
 import { toppings } from "../constants";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
+import { containerVariants } from "../animations";
 
 export default function Toppings({ addTopping, pizza }) {
   return (
     <motion.div
       className="toppings container"
-      initial={{ x: "100vw" }}
-      animate={{ x: 0 }}
-      transition={{ type: "spring", delay: 0.2 }}
+      variants={containerVariants}
+      initial="initial"
+      animate="final"
     >
       <h3>Step 2: Choose Toppings</h3>
       <ul>

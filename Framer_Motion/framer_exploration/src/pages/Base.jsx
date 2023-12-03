@@ -2,14 +2,15 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { bases } from "../constants";
 import { motion } from "framer-motion";
+import { containerVariants, nextVariants } from "../animations";
 
 export default function Base({ addBase, pizza }) {
   return (
     <motion.div
       className="base container"
-      initial={{ x: "100vw" }}
-      animate={{ x: 0 }}
-      transition={{ type: "spring", delay: 0.2 }}
+      variants={containerVariants}
+      initial="initial"
+      animate="final"
     >
       <h3>Step 1: Choose Your Base</h3>
       <ul>
@@ -36,12 +37,7 @@ export default function Base({ addBase, pizza }) {
       </ul>
 
       {pizza.base && (
-        <motion.div
-          className="next"
-          initial={{ x: "-100vw" }}
-          animate={{ x: 0 }}
-          transition={{ type: "spring", stiffness: "150" }}
-        >
+        <motion.div className="next" variants={nextVariants}>
           <Link to="/toppings">
             <motion.button
               whileHover={{
