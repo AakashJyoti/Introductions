@@ -40,3 +40,36 @@ export const childVariants = {
     opacity: 1,
   },
 };
+
+export const buttonVariants = {
+  final: {
+    x: [0, -20, 20, -20, 20, 0],
+    transition: {
+      delay: 1,
+    },
+  },
+  hover: {
+    scale: [1, 1.1, 1],
+    textShadow: "0px 0px 8px rgb(255,255,255)",
+    boxShadow: "0px 0px 8px rgb(255,255,255)",
+    transition: {
+      ease: "easeInOut",
+      repeat: Infinity,
+      repeatDelay: 0.2,
+      duration: 0.4,
+      times: [0, 0.2, 0.5, 0.8, 1],
+    },
+  },
+};
+
+export const listVariants = {
+  hover: {
+    scale: 1.1,
+    color: "#F8e112",
+    originX: 0,
+    transition: {
+      type: "tween",
+      duration: 0.1,
+    },
+  },
+};

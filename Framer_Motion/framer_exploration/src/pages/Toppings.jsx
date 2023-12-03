@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { toppings } from "../constants";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
-import { containerVariants } from "../animations";
+import { buttonVariants, containerVariants, listVariants } from "../animations";
 
 export default function Toppings({ addTopping, pizza }) {
   return (
@@ -20,15 +20,8 @@ export default function Toppings({ addTopping, pizza }) {
             <motion.li
               key={topping}
               onClick={() => addTopping(topping)}
-              whileHover={{
-                scale: 1.1,
-                color: "#F8e112",
-                originX: 0,
-              }}
-              transition={{
-                type: "tween",
-                duration: 0.1,
-              }}
+              variants={listVariants}
+              whileHover="hover"
             >
               <span className={spanClass}>{topping}</span>
             </motion.li>
@@ -37,13 +30,7 @@ export default function Toppings({ addTopping, pizza }) {
       </ul>
 
       <Link to="/order">
-        <motion.button
-          whileHover={{
-            scale: 1.1,
-            textShadow: "0px 0px 8px rgb(255,255,255)",
-            boxShadow: "0px 0px 8px rgb(255,255,255)",
-          }}
-        >
+        <motion.button variants={buttonVariants} whileHover="hover">
           Order
         </motion.button>
       </Link>

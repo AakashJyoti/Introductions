@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import { bases } from "../constants";
 import { motion } from "framer-motion";
-import { containerVariants, nextVariants } from "../animations";
+import { bases } from "../constants";
+import {
+  buttonVariants,
+  containerVariants,
+  listVariants,
+  nextVariants,
+} from "../animations";
 
 export default function Base({ addBase, pizza }) {
   return (
@@ -20,15 +25,8 @@ export default function Base({ addBase, pizza }) {
             <motion.li
               key={base}
               onClick={() => addBase(base)}
-              whileHover={{
-                scale: 1.1,
-                color: "#F8e112",
-                originX: 0,
-              }}
-              transition={{
-                type: "tween",
-                duration: 0.1,
-              }}
+              variants={listVariants}
+              whileHover="hover"
             >
               <span className={spanClass}>{base}</span>
             </motion.li>
@@ -39,13 +37,7 @@ export default function Base({ addBase, pizza }) {
       {pizza.base && (
         <motion.div className="next" variants={nextVariants}>
           <Link to="/toppings">
-            <motion.button
-              whileHover={{
-                scale: 1.1,
-                textShadow: "0px 0px 8px rgb(255,255,255)",
-                boxShadow: "0px 0px 8px rgb(255,255,255)",
-              }}
-            >
+            <motion.button variants={buttonVariants} whileHover="hover">
               Next
             </motion.button>
           </Link>
