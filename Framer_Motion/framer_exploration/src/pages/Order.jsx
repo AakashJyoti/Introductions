@@ -9,8 +9,10 @@ export default function Order({ pizza }) {
       variants={containerVariants}
       initial="initial"
       animate="final"
+      exit="exit"
     >
       <h2>Thank you for your order :)</h2>
+
       <motion.p variants={childVariants}>
         You ordered a {pizza.base} pizza with:
       </motion.p>

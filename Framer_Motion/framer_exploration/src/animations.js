@@ -1,3 +1,22 @@
+export const homeVariants = {
+  initial: {
+    opacity: 0,
+  },
+  final: {
+    opacity: 1,
+    transition: {
+      delay: 0.5,
+      duration: 1.5,
+    },
+  },
+  exit: {
+    x: "-100vw",
+    transition: {
+      ease: "easeInOut",
+    },
+  },
+};
+
 export const containerVariants = {
   initial: {
     opacity: 0,
@@ -13,6 +32,12 @@ export const containerVariants = {
       damping: 8,
       when: "beforeChildren",
       staggerChildren: 0.4,
+    },
+  },
+  exit: {
+    x: "-100vw",
+    transition: {
+      ease: "easeInOut",
     },
   },
 };

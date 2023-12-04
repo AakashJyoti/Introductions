@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { buttonVariants } from "../animations";
+import { buttonVariants, homeVariants } from "../animations";
 
 export default function Home() {
   return (
     <motion.div
       className="home container"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.5, duration: 1.5 }}
+      variants={homeVariants}
+      initial="initial"
+      animate="final"
+      exit="exit"
     >
       <h2>Welcome to Pizza Joint</h2>
       <Link to="/base">

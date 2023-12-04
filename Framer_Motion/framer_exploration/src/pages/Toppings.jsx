@@ -11,6 +11,7 @@ export default function Toppings({ addTopping, pizza }) {
       variants={containerVariants}
       initial="initial"
       animate="final"
+      exit="exit"
     >
       <h3>Step 2: Choose Toppings</h3>
       <ul>
