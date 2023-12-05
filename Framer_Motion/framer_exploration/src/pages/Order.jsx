@@ -1,8 +1,15 @@
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import { containerVariants, childVariants } from "../animations";
+import { useEffect } from "react";
 
-export default function Order({ pizza }) {
+export default function Order({ pizza, setShowModal }) {
+  useEffect(() => {
+    setTimeout(() => {
+      setShowModal(true);
+    }, 5000);
+  }, [setShowModal]);
+
   return (
     <motion.div
       className="container order"
@@ -26,6 +33,7 @@ export default function Order({ pizza }) {
 }
 
 Order.propTypes = {
+  setShowModal: PropTypes.func.isRequired,
   pizza: PropTypes.shape({
     base: PropTypes.string,
     toppings: PropTypes.arrayOf(PropTypes.string),
