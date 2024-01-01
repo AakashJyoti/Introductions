@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { CartItems } from "../context/ContextProvider";
+import { CartContext } from "../context/ContextProvider";
 
 const SingleProduct = ({ prod }) => {
-  const { cart, setCart } = useContext(CartItems);
+  const { cart, setCart } = useContext(CartContext);
 
   return (
     <div className="w-96 flex flex-col shadow-2xl p-3 m-3 rounded-2xl bg-slate-200">
