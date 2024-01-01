@@ -1,7 +1,9 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 
 const Post = () => {
   const params = useParams();
+  // const data = useLoaderData()
+  
   const { id } = params;
   return (
     <div>
