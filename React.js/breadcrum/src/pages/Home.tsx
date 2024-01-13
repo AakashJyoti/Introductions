@@ -31,7 +31,7 @@ const Home = () => {
           ))}
         </div>
         <Link to={"/products"}>
-          <p className="text-right underline mx-20 text-blue-700 hover:text-blue-500">
+          <p className="text-center text-xl text-blue-700 hover:text-blue-500 mt-4">
             All Products
           </p>
         </Link>
@@ -39,4 +39,5 @@ const Home = () => {
     </div>
   );
 };
+
 export default Home;

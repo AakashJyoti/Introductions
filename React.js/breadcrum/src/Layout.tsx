@@ -1,10 +1,11 @@
 import { Outlet } from "react-router-dom";
-import { Navbar } from "./components";
+import { Breadcrumbs, Navbar } from "./components";
 
 const Layout = () => {
   return (
     <>
       <Navbar />
+      <Breadcrumbs />
       <Outlet />
     </>
   );
