@@ -2,6 +2,7 @@ import { useMutation, useQuery } from "@tanstack/react-query";
 import { PRODUCT_API } from "../constant";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { queryClient } from "../main";
 
 const Product = () => {
   const { productId } = useParams();
@@ -25,9 +26,9 @@ const Product = () => {
     mutationFn: (newProduct) => {
       return axios.put(`${PRODUCT_API}/${productId}`, newProduct);
     },
-    // onSettled: async () => {
-    //   return await queryClient.invalidateQueries({ queryKey: ["todos"] });
-    // },
+    onSettled: async () => {
+      return await queryClient.invalidateQueries({ queryKey: ["product"] });
+    },
   });
 
   if (isLoading) {

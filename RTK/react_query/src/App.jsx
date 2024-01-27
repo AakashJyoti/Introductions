@@ -4,8 +4,7 @@ import Products from "./pages/Products";
 import Product from "./pages/Product";
 import Layout from "./Layout";
 import ProductsOld from "./pages/ProductsOld";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
 
 const router = createBrowserRouter([
   {
@@ -36,21 +35,8 @@ const router = createBrowserRouter([
   },
 ]);
 
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      staleTime: 10000,
-    },
-  },
-});
-
 function App() {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
-      <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
