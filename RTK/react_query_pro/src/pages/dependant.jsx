@@ -1,16 +1,17 @@
 import { useQuery } from "@tanstack/react-query";
+import { API_URL } from "../constants";
 
 const fetchPostById = async (postId) => {
-  const data = await fetch(`https://dummyjson.com/posts/${postId}`).then(
-    (res) => res.json()
+  const data = await fetch(`${API_URL}/posts/${postId}`).then((res) =>
+    res.json()
   );
   return data;
 };
 
 const fetchCommentsByPostId = async (postId) => {
-  const data = await fetch(
-    `https://dummyjson.com/comments/post/${postId}`
-  ).then((res) => res.json());
+  const data = await fetch(`${API_URL}/comments/post/${postId}`).then((res) =>
+    res.json()
+  );
   return data.comments;
 };
 

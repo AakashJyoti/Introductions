@@ -1,20 +1,21 @@
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { queryClient } from "../main";
+import { DB_URL } from "../constants";
 
 const Optimistic = () => {
   const { data: posts } = useQuery({
     queryKey: ["posts"],
     queryFn: async () => {
-      const response = await fetch(
-        "http://localhost:3000/posts?_sort=id&_order=desc"
-      ).then((data) => data.json());
+      const response = await fetch(`${DB_URL}/posts?_sort=id&_order=desc`).then(
+        (data) => data.json()
+      );
       return response;
     },
   });
 
-  const { mutate, isError } = useMutation({
+  const { mutate, isPending, variables, isError } = useMutation({
     mutationFn: (newProduct) =>
-      fetch("http://localhost:3000/posts", {
+      fetch(`${DB_URL}/postss`, {
         method: "POST",
         body: JSON.stringify(newProduct),
         headers: {
@@ -34,6 +35,10 @@ const Optimistic = () => {
     };
     mutate(post);
     e.target.reset();
+  };
+
+  const handleRetry = () => {
+    mutate(variables);
   };
 
   return (
@@ -58,7 +63,20 @@ const Optimistic = () => {
         <div className="flex-1">
           <h2 className="text-lg font-bold mb-4">Posts:</h2>
           <ul>
-            {isError && <p className="text-red-500">Something went wrong</p>}
+            {isPending && (
+              <li className="border p-2 mb-4 opacity-40" key={variables.id}>
+                {variables.title}
+              </li>
+            )}
+
+            {isError && (
+              <li className="border p-2 mb-4 flex" key={variables.id}>
+                <span className="text-red-500">{variables.title}</span>
+                <button className="text-blue-500" onClick={handleRetry}>
+                  retry
+                </button>
+              </li>
+            )}
 
             {posts?.map((post) => {
               return (
