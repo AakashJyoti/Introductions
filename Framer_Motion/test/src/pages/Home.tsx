@@ -12,7 +12,8 @@ const Home = () => {
       <button onClick={handleModal} className="border-2 px-4 py-1 rounded mt-2">
         Open Modal
       </button>
-      {isModalOpen && <HelloModal handleModal={handleModal} />}
+
+      <HelloModal handleModal={handleModal} isModalOpen={isModalOpen} />
     </>
   );
 };
