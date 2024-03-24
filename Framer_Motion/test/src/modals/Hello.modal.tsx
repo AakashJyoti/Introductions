@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { bgVariants, modalVariants } from "./animations";
+import { bgVariants, modalVariants } from "../lib/animations";
 
 type PropsType = {
   handleModal: () => void;

@@ -1,7 +1,13 @@
 import { NavLink } from "react-router-dom";
 import { links } from "../lib/routes";
+import { useDispatch } from "react-redux";
+import { openModal } from "../features/modal";
 
 const Navbar = () => {
+  const dispatch = useDispatch();
+
+  const handleOpenModal = (type: string) => dispatch(openModal(type));
+
   return (
     <div className="py-2 px-4 border-b shadow flex justify-center items-center gap-2 relative">
       {links.map((link) => (
@@ -20,8 +26,18 @@ const Navbar = () => {
         </NavLink>
       ))}
       <div className="space-x-2 absolute right-4">
-        <button className="border-2 w-20 h-8 rounded">Login</button>
-        <button className="border-2 w-20 h-8 rounded">Sign up</button>
+        <button
+          className="border-2 w-20 h-8 rounded"
+          onClick={() => handleOpenModal("login")}
+        >
+          Login
+        </button>
+        <button
+          className="border-2 w-20 h-8 rounded"
+          onClick={() => handleOpenModal("signUp")}
+        >
+          Sign up
+        </button>
       </div>
     </div>
   );
