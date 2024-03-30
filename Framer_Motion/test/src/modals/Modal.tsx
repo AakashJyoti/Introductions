@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { bgVariants, modalVariants } from "../lib/animations";
 import { closeModal } from "../features/modal";
 import LoginModal from "./Login.modal";
-import SignUpModal from "./SignUp.modal";
+import SignUpModal from "./Signup.modal";
 
 const Modal = () => {
   const dispatch = useDispatch();
