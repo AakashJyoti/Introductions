@@ -2,14 +2,17 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 
-def home(request):
-    # return HttpResponse('Hello mom')
+def base(request):
     return render(request, "website/index.html")
 
 
+def home(request):
+    return HttpResponse("Hello there in Home route")
+
+
 def about(request):
-    return HttpResponse("Hello my love")
+    return HttpResponse("Hello there in About route")
 
 
-def life(request):
-    return HttpResponse("Hello grind")
+def contact(request):
+    return HttpResponse("Hello there in Contact route")
