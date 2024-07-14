@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+const age = 57
+
 func main() {
 	fmt.Println("Hello mom")
 
@@ -24,4 +26,14 @@ func main() {
 
 	fmt.Println(name)
 
+	// age = 14 // not allowed
+	fmt.Println(age)
+
+	const (
+		port = 5000
+		host = "localhost"
+	)
+
+	fmt.Println(host)
+	fmt.Println(port)
 }
