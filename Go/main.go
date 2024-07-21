@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 const age = 57
 
 func main() {
@@ -40,6 +38,7 @@ func main() {
 	// fmt.Println(host)
 	// fmt.Println(port)
 
+	// // for loop
 	// for -> only constructor for looping
 
 	// while loop
@@ -60,8 +59,58 @@ func main() {
 	// 	fmt.Println(i)
 	// }
 
-	for i := range 677 {
-		fmt.Println(i)
-	}
+	// for i := range 5 {
+	// 	fmt.Println(i)
+	// }
+
+	// // if else
+
+	// age := 13
+
+	// if age > 18 {
+	// 	fmt.Println("Person is an adult")
+	// } else if age == 18 {
+	// 	fmt.Println("person is about to be an adult")
+	// } else {
+	// 	fmt.Println("person is not an adult")
+	// }
+
+	// // switch case
+
+	// i := 3
+
+	// switch i {
+	// case 1:
+	// 	fmt.Println("one")
+	// case 2:
+	// 	fmt.Println("two")
+	// case 3:
+	// 	fmt.Println("three")
+	// default:
+	// 	fmt.Println("other")
+	// }
+
+	// // time
+
+	// time := time.Now()
+	// day := time.Day()
+	// hour := time.Hour()
+	// min := time.Minute()
+	// sec := time.Second()
+	// year := time.Year()
+	// month := time.Month()
+	// str := time.String()
+
+	// fmt.Println(time)
+	// fmt.Println("day: ", day)
+	// fmt.Println("hour: ", hour)
+	// fmt.Println("min: ", min)
+	// fmt.Println("sec: ", sec)
+	// fmt.Println("year: ", year)
+	// fmt.Println("month: ", month)
+	// fmt.Println("str: ", str)
+
+	// // type check
+	// fmt.Println(reflect.TypeOf(age))
 
 }
