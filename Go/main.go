@@ -1,6 +1,6 @@
 package main
 
-const age = 57
+// const age = 57
 
 func main() {
 	// fmt.Println("Hello mom")
@@ -112,5 +112,14 @@ func main() {
 
 	// // type check
 	// fmt.Println(reflect.TypeOf(age))
+
+	// // Array = numbered sequence of specific length
+	// var nums [4]int
+
+	// // length
+	// fmt.Println(len(nums))
+
+	// nums[0] = 1
+	// fmt.Println(nums[0])
 
 }
