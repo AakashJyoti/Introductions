@@ -122,4 +122,53 @@ func main() {
 	// nums[0] = 1
 	// fmt.Println(nums[0])
 
+	// // Slices - Dynamic arrays
+
+	// var numbers []int //uninitialized slice nil
+	// fmt.Println(numbers)
+	// fmt.Println(numbers == nil)
+	// fmt.Println(len(numbers))
+
+	// var numbersAgain = make([]int, 2)
+	// fmt.Println(numbersAgain)
+	// // cap -> capacity = maximum numbers fo elements can fit
+	// fmt.Println(cap(numbersAgain))
+
+	// numbers = append(numbers, 1)
+	// fmt.Println(numbers)
+	// fmt.Println(cap(numbers))
+
+	// numSlice := []int{}
+
+	// numSlice = append(numSlice, 1)
+	// numSlice = append(numSlice, 2)
+
+	// fmt.Println(numSlice)
+	// fmt.Println(cap(numSlice))
+	// fmt.Println(len(numSlice))
+
+	// var nums = make([]int, 0, 5)
+	// nums = append(nums, 2)
+	// var nums2 = make([]int, len(nums))
+
+	// //copy function
+	// copy(nums2, nums)
+
+	// fmt.Println(nums, nums2)
+
+	// Slice operator
+	// var nums = []int{1, 2, 3}
+	// fmt.Println(nums[0:2])
+	// fmt.Println(nums[:2])
+	// fmt.Println(nums[1:])
+
+	// slice package
+	// var nums1 = []int{1, 2}
+	// var nums2 = []int{1, 2, 3}
+
+	// fmt.Println(slices.Equal(nums1, nums2))
+
+	// var nums = [][]int{{1, 2, 3}, {1, 2, 3}}
+	// fmt.Println(nums)
+
 }
