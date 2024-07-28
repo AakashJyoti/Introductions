@@ -1,10 +1,26 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 // const age = 57
+
+func add(a, b int) int {
+	return a + b
+}
+
+func getLanguages() (string, string, string) {
+	return "golang", "javascript", "python"
+}
+
+func processIt(fn func(a int) int) {
+	fn(2)
+}
+
+func processItAgain() func(a int) int {
+	return func(a int) int {
+		return a + 10
+	}
+}
 
 func main() {
 	// fmt.Println("Hello mom")
@@ -232,7 +248,24 @@ func main() {
 	// // starting byte of rune
 
 	//// Range in String
-	for i, c := range "golang" {
-		fmt.Println(i, string(c))
+	// for i, c := range "golang" {
+	// 	fmt.Println(i, string(c))
+	// }
+
+	// // Functions
+	result := add(30, 22)
+	fmt.Println(result)
+
+	lang1, lang2, lang3 := getLanguages()
+	fmt.Println(lang1, lang2, lang3)
+
+	fn := func(a int) int {
+		return a
 	}
+
+	processIt(fn)
+
+	fn1 := processItAgain()
+	val := fn1(12)
+	fmt.Println(val)
 }
