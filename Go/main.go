@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	"maps"
+)
+
 // const age = 57
 
 func main() {
@@ -170,5 +175,39 @@ func main() {
 
 	// var nums = [][]int{{1, 2, 3}, {1, 2, 3}}
 	// fmt.Println(nums)
+
+	// //maps -> objects,Dictionary
+	// m := make(map[string]string)
+	// m["name"] = "golang" //set element
+	// m["area"] = "backend"
+	// fmt.Println(m["name"]) //get element
+	// // // if key does not exist in the map it returns zero value
+	// fmt.Println(m["phone"])
+	// fmt.Println(m["area"])
+	// fmt.Println(len(m))
+
+	// delete(m, "area") //delete elements
+	// fmt.Println(m)
+
+	// clear(m) // Clear whole map
+	// fmt.Println(m)
+
+	m := map[string]int{"age": 26, "phone": 2}
+	m2 := map[string]int{"age": 26, "phone": 2}
+	fmt.Println(m)
+
+	value, ok := m["phone"]
+
+	if ok {
+		fmt.Println("all ok")
+	} else {
+		fmt.Println("not ok")
+	}
+
+	fmt.Println("value", value)
+
+	isEqual := maps.Equal(m, m2)
+
+	fmt.Println(isEqual)
 
 }
