@@ -4,22 +4,34 @@ import "fmt"
 
 // const age = 57
 
-func add(a, b int) int {
-	return a + b
-}
+// // Functions
 
-func getLanguages() (string, string, string) {
-	return "golang", "javascript", "python"
-}
+// func add(a, b int) int {
+// 	return a + b
+// }
 
-func processIt(fn func(a int) int) {
-	fn(2)
-}
+// func getLanguages() (string, string, string) {
+// 	return "golang", "javascript", "python"
+// }
 
-func processItAgain() func(a int) int {
-	return func(a int) int {
-		return a + 10
+// func processIt(fn func(a int) int) {
+// 	fn(2)
+// }
+
+// func processItAgain() func(a int) int {
+// 	return func(a int) int {
+// 		return a + 10
+// 	}
+// }
+
+// // variadic functions
+func sum(nums ...int) int {
+	total := 0
+
+	for _, num := range nums {
+		total += num
 	}
+	return total
 }
 
 func main() {
@@ -253,19 +265,24 @@ func main() {
 	// }
 
 	// // Functions
-	result := add(30, 22)
-	fmt.Println(result)
+	// result := add(30, 22)
+	// fmt.Println(result)
 
-	lang1, lang2, lang3 := getLanguages()
-	fmt.Println(lang1, lang2, lang3)
+	// lang1, lang2, lang3 := getLanguages()
+	// fmt.Println(lang1, lang2, lang3)
 
-	fn := func(a int) int {
-		return a
-	}
+	// fn := func(a int) int {
+	// 	return a
+	// }
 
-	processIt(fn)
+	// processIt(fn)
 
-	fn1 := processItAgain()
-	val := fn1(12)
-	fmt.Println(val)
+	// fn1 := processItAgain()
+	// val := fn1(12)
+	// fmt.Println(val)
+
+	// // Variadic functions -- functions in which we can pass n number of parameter
+	numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
+	total := sum(numbers...)
+	fmt.Println(total)
 }
