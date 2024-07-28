@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"maps"
 )
 
 // const age = 57
@@ -192,22 +191,48 @@ func main() {
 	// clear(m) // Clear whole map
 	// fmt.Println(m)
 
-	m := map[string]int{"age": 26, "phone": 2}
-	m2 := map[string]int{"age": 26, "phone": 2}
-	fmt.Println(m)
+	// m := map[string]int{"age": 26, "phone": 2}
+	// m2 := map[string]int{"age": 26, "phone": 2}
+	// fmt.Println(m)
 
-	value, ok := m["phone"]
+	// value, ok := m["phone"]
 
-	if ok {
-		fmt.Println("all ok")
-	} else {
-		fmt.Println("not ok")
+	// if ok {
+	// 	fmt.Println("all ok")
+	// } else {
+	// 	fmt.Println("not ok")
+	// }
+
+	// fmt.Println("value", value)
+
+	// isEqual := maps.Equal(m, m2)
+
+	// fmt.Println(isEqual)
+
+	// // Range is used to iterate over data structure
+	//// Range in Slice
+	// nums := []int{6, 7, 8}
+	// sum := 0
+
+	// for index, num := range nums {
+	// 	fmt.Println("index", index)
+	// 	sum += num
+	// }
+
+	// fmt.Println(sum)
+
+	//// Range in map
+	// m := map[string]string{"name": "Aakash", "lName": "Jyoti"}
+
+	// for key, val := range m {
+	// 	fmt.Println("key", key, ", value", val)
+	// }
+
+	// // unicode code point rune
+	// // starting byte of rune
+
+	//// Range in String
+	for i, c := range "golang" {
+		fmt.Println(i, string(c))
 	}
-
-	fmt.Println("value", value)
-
-	isEqual := maps.Equal(m, m2)
-
-	fmt.Println(isEqual)
-
 }
